@@ -5,3 +5,5 @@ We are setting a position of text inside `withAnimation {}` block. On iOS 15, th
 How can we get back the iOS 15 behavior?
 
 Gif:
+
+![Screen recording of the issue](./ios16-text-regression.gif)
