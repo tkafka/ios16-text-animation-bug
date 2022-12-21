@@ -42,21 +42,35 @@ struct FollowFingerText: View {
 	let circleSize: CGFloat = 44
 	let rounding: CGFloat = 20
 	
+	let version = UIDevice.current.systemVersion
+	var hint: String {
+		if version.starts(with: "15") {
+			return "iOS \(version): changing text animates its position smoothly"
+		} else {
+			return "iOS \(version): once the text changes, it is recreated at new origin for every animation step"
+		}
+	}
+	
 	var body: some View {
 		GeometryReader { proxy in
-			VStack() {
+			VStack(alignment: .leading) {
 				Text("Static text.")
-					.font(.title)
+					.font(.headline)
 					.offset(x: currentPosition.x, y: currentPosition.y)
 					.id("text1")
 					.animation(.default, value: currentPosition)
 				
 				Text("Dynamic: \(Int(currentPosition.x)),\(Int(currentPosition.y))")
-					.font(.title)
+					.font(.headline)
 					// .animation(nil, value: 1) /// doesn't help
 					.offset(x: currentPosition.x, y: currentPosition.y)
 					.id("text2")
 					.animation(.default, value: currentPosition)
+
+				Text(hint)
+					.font(.footnote)
+					.offset(x: currentPosition.x, y: currentPosition.y)
+					.id("hint")
 
 				Circle()
 					.fill(.red)
@@ -66,8 +80,8 @@ struct FollowFingerText: View {
 					.animation(.default, value: currentPosition)
 
 			}
-			.frame(alignment: .topLeading)
-			.debugFrame()
+			.frame(maxWidth: 180, alignment: .topLeading)
+			// .debugFrame()
 			
 		} /// geo reader
 		.contentShape(Rectangle())
