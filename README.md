@@ -4,6 +4,7 @@ We are setting a position of text inside `withAnimation {}` block. On iOS 15, th
 
 How can we get back the iOS 15 behavior?
 
-Gif:
+See the `FollowFingerText` component - [link to code](https://github.com/tkafka/ios16-text-animation-bug/blob/main/test-text-animation/ContentView.swift#L54).
 
+Screen recording of the issue:
 ![Screen recording of the issue](./ios16-text-regression.gif)
