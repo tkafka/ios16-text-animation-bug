@@ -10,5 +10,9 @@ See the `FollowFingerText` component - [link to code](https://github.com/tkafka/
 
 Add `.contentTransition(.identity)` to affected `Text` views (and write some conditional shim for iOS 15 and older, might be empty as the Text behaves well there).
 
+## The problem with the solution
+
+Does not help with `SymbolView` (`Image(systemName:)`)
+
 ## Screen recording of the issue:
 ![Screen recording of the issue](./ios16-text-regression.gif)
