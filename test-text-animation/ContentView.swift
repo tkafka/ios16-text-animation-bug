@@ -58,6 +58,15 @@ public extension Backport where Content: View {
 			content
 		}
 	}
+	
+	@ViewBuilder func contentTransitionInterpolate() -> some View {
+		if #available(iOS 16.0, watchOS 9.0, tvOS 16.0, macCatalyst 16.0, macOS 13.0, *) {
+			content
+				.contentTransition(.interpolate)
+		} else {
+			content
+		}
+	}
 }
 
 
@@ -98,11 +107,11 @@ struct SymbolView: View {
 			Image(systemName: systemName)
 			// .resizable()
 				.id("symbol")
-				.backport.contentTransitionIdentity()
+				.backport.contentTransitionIdentity() /// `contentTransitionInterpolate()` doesn't help either
 		}
 		.frame(width: size, height: size)
 		.id("zstack")
-		.backport.contentTransitionIdentity()
+		.backport.contentTransitionIdentity() /// `contentTransitionInterpolate()` doesn't help either
 	}
 }
 
