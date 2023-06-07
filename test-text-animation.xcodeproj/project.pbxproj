@@ -14,6 +14,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3DD929242A3081BC004AFBA5 /* ios16-symbol-animation-regression.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "ios16-symbol-animation-regression.gif"; sourceTree = "<group>"; };
 		3DE1AB9529532F92000E29F3 /* test-text-animation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "test-text-animation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DE1AB9829532F92000E29F3 /* test_text_animationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test_text_animationApp.swift; sourceTree = "<group>"; };
 		3DE1AB9A29532F92000E29F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -37,6 +38,7 @@
 		3DE1AB8C29532F92000E29F3 = {
 			isa = PBXGroup;
 			children = (
+				3DD929242A3081BC004AFBA5 /* ios16-symbol-animation-regression.gif */,
 				3DE1ABA729533957000E29F3 /* ios16-text-regression.gif */,
 				3DE1ABA629533957000E29F3 /* README.md */,
 				3DE1AB9729532F92000E29F3 /* test-text-animation */,

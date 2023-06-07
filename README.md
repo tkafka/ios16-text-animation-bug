@@ -15,4 +15,7 @@ Add `.contentTransition(.identity)` to affected `Text` views (and write some con
 Does not help with `SymbolView` (`Image(systemName:)`)
 
 ## Screen recording of the issue:
+![Screen recording of the issue](./ios16-symbol-animation-regression.gif)
+
+Previous problem with text:
 ![Screen recording of the issue](./ios16-text-regression.gif)
